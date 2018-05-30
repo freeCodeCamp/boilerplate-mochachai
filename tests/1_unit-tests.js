@@ -138,7 +138,7 @@ suite('Unit Tests', function(){
     /** 13 - #isString asserts that the actual value is a string. **/
     test('#isString, #isNotString', function() {
       assert.fail(Math.sin(Math.PI/4), 'a float is not a string');
-      assert.fail(process.env.NODE_ENGINE, 'env vars are strings (or undefined)');
+      assert.fail(process.env.PATH, 'env vars are strings (or undefined)');
       assert.fail(JSON.stringify({type: 'object'}), 'a JSON is a string');
     });
     
