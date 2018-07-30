@@ -101,8 +101,8 @@ suite('Unit Tests', function(){
     // actual = expected +/- range
     // Choose the minimum range (3rd parameter) to make the test always pass
     // it should be less than 1
-    test('#isApproximately', function() {
-      assert.approximatey(weirdNumbers(0.5) , 1, /*edit this*/ 0 );
+    test('#approximately', function() {
+      assert.approximately(weirdNumbers(0.5) , 1, /*edit this*/ 0 );
       assert.approximately(weirdNumbers(0.2) , 1, /*edit this*/ 0 );
     });
   });
