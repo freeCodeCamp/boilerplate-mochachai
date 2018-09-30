@@ -1,0 +1,31 @@
+      body {
+        color: #222;
+        background-color: #eee;
+        font-family: sans-serif;
+        text-align: center;
+      }
+      #tn{
+        margin-top:30px;
+      }
+      h1 {
+        margin-bottom: 40px;
+      }
+      #tn span{
+        font-weight: bold;
+      }
+      .pane {
+        border: solid 1px #999;
+        border-radius: 10px;
+        max-width: 650px;
+        margin: 10px auto;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .specs {
+        font-family: monospace;
+        font-size: 1.1em;
+        margin: 10px auto;
+        text-align: left;
+        padding-left: 10px;
+        color: #555;
+      }
