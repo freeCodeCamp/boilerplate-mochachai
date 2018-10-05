@@ -4,7 +4,7 @@
 This is the repository for the freeCodeCamp [Quality Assurance with Chai Challenges](https://learn.freecodecamp.org/information-security-and-quality-assurance/quality-assurance-and-testing-with-chai/).   
 The tests for the first to the 18th challenges (Unit Tests) reside in [1_unit-tests.js](tests/1_unit-tests.js).  
 The tests for the first to the 18th challenges (Functional Tests) reside in [2_functional-tests.js](tests/1_unit-tests.js).  
-Both are in the ```tests``` Folder and may be run locally - see [below](#-run-test-server).
+Both are in the ```tests``` Folder and may be run locally - see [below](#-running).
 
 ## Installation
 
@@ -41,7 +41,7 @@ But to develop locally, there is one more step necessary, run:
 npm install
 ```
 
-## Run Test Server
+## Running
 
 Should you want to go through the challenges locally, run:
 ```
