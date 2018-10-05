@@ -48,7 +48,8 @@ Should you want to go through the challenges locally, run:
 npm run start
 ```
 This runs the tests and shows which tests pass and which don't (you might have 
-to scroll up a little). The goal is to see: " 28 passing".  
+to scroll up a little).  
+The goal is to see: " 28 passing".  
 Exit with ```CTRL(STRG/CMD)+C``` or just close the terminal window / command prompt.
 
 ## Conclusion
