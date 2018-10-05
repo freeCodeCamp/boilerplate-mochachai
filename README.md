@@ -8,8 +8,9 @@ Both are in the ```tests``` Folder and may be run locally - see [below](#running
 
 ## Installation
 
-If you haven't worked with **git** before, you might first want to read a few   
-[resources](http://try.github.io/) about it, or go the [Glitch](https://glitch.com/) 
+If you haven't worked with **git** before, you might first want to read a few 
+[resources](http://try.github.io/) about it,   
+or go the [Glitch](https://glitch.com/) 
 way as described on the above mentioned challenge introduction page.
 
 To clone this Repository, go to a directory of your choice and enter:
