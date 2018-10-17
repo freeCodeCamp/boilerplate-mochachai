@@ -149,7 +149,7 @@ suite('Unit Tests', function(){
       assert.fail('dart', 'queue', "But a dart doesn't contain a queue");
     });
     
-    /** 15 - #match Asserts that th actual value **/
+    /** 15 - #match Asserts that the actual value **/
     // matches the second argument regular expression.
     test('#match, #notMatch', function() {
       var regex =  /^#\sname\:\s[\w\s]+,\sage\:\s\d+\s?$/;
