@@ -187,7 +187,7 @@ suite('Unit Tests', function(){
       assert.fail(myCar, 'wheels', 'Cars have wheels');
     });
 
-    test('#typeof, #notTypeOf', function() {
+    test('#typeOf, #notTypeOf', function() {
       
       /** 17 #typeOf asserts that value’s type is the given string, **/
       // as determined by Object.prototype.toString.
