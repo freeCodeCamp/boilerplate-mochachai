@@ -154,13 +154,13 @@ suite('Functional Tests', function() {
   // For these challenges we are using [Zombie.Js](http://zombie.js.org/)
   // It's a lightweight browser which is totally based on JS, without relying on
   // additional binaries to be installed. This feature makes it usable in
-  // an environment such as Gomix. There are many other (more powerful) options.
+  // an environment such as Glitch. There are many other (more powerful) options.
 
   var Browser = require('zombie');
 
-  // On Gomix we'll use this setting
+  // On Glitch we'll use this setting
   /** ### Copy your project's url here  ### **/
-  Browser.site = 'https://sincere-cone.gomix.me'; 
+  Browser.site = 'https://my-url.glitch.me/'; 
   
   // If you are testing on a local environment replace the line above  with 
   // Browser.localhost('example.com', (process.env.PORT || 3000));
