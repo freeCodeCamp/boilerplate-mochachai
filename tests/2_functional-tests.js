@@ -241,9 +241,9 @@ suite('Functional Tests', function() {
 
             // assert that status is OK 200
 
-            // assert that the text inside the element 'span#name' is 'Marco'
+            // assert that the text inside the element 'span#name' is 'Cristoforo'
 
-            // assert that the text inside the element 'span#surname' is 'Polo'
+            // assert that the text inside the element 'span#surname' is 'Colombo'
 
             // assert that the element(s) 'span#dates' exist and their count is 1
             
