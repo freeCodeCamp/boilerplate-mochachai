@@ -1,4 +1,4 @@
-FCC Test Challengs Prototype 
+FCC Test Challenge Prototype 
 ============================
 
 QA with mocha & chai
