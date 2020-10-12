@@ -145,8 +145,8 @@ suite('Unit Tests', function(){
     /** 14 - #include (on #notInclude ) works for strings too !! **/
     // It asserts that the actual string contains the expected substring
     test('String #include, #notInclude', function() {
-      assert.fail('Arrow', 'row', "Arrow contains row...");
-      assert.fail('dart', 'queue', "But a dart doesn't contain a queue");
+      assert.include('Arrow', 'row', "Arrow contains row...");
+      assert.notInclude('dart', 'queue', "But a dart doesn't contain a queue");
     });
     
     /** 15 - #match Asserts that the actual value **/
