@@ -182,9 +182,9 @@ suite('Unit Tests', function(){
     /** 16 - #property asserts that the actual object has a given property. **/
     // Use #property or #notProperty where appropriate
     test('#property, #notProperty', function() {
-      assert.fail(myCar, 'wings', 'A car has not wings');
-      assert.fail(airlinePlane, 'engines', 'planes have engines');
-      assert.fail(myCar, 'wheels', 'Cars have wheels');
+      assert.notProperty(myCar, 'wings', 'A car has not wings');
+      assert.property(airlinePlane, 'engines', 'planes have engines');
+      assert.property(myCar, 'wheels', 'Cars have wheels');
     });
 
     test('#typeOf, #notTypeOf', function() {
