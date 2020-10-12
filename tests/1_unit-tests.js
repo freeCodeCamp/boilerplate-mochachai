@@ -65,8 +65,8 @@ suite('Unit Tests', function(){
     /** 7 - .deepEqual(), .notDeepEqual() **/
     // .deepEqual() asserts that two object are deep equal
     test('#deepEqual, #notDeepEqual', function(){
-      assert.fail( { a: '1', b: 5 } , { b: 5, a: '1' }, "keys order doesn't matter" );
-      assert.fail( { a: [5, 6] }, { a: [6, 5] }, "array elements position does matter !!" );
+      assert.deepEqual( { a: '1', b: 5 } , { b: 5, a: '1' }, "keys order doesn't matter" );
+      assert.notDeepEqual( { a: [5, 6] }, { a: [6, 5] }, "array elements position does matter !!" );
     });
   });
 
