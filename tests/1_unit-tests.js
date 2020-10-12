@@ -203,10 +203,10 @@ suite('Unit Tests', function(){
       
       /** 18 #instanceOf asserts that an object is an instance of a constructor **/
       // Use #instanceOf or #notInstanceOf where appropriate
-      assert.fail(myCar, Plane);
-      assert.fail(airlinePlane, Plane);
-      assert.fail(airlinePlane, Object, 'everything is an Object');
-      assert.fail(myCar.wheels, String );
+      assert.notInstanceOf(myCar, Plane);
+      assert.instanceOf(airlinePlane, Plane);
+      assert.instanceOf(airlinePlane, Object, 'everything is an Object');
+      assert.notInstanceOf(myCar.wheels, String );
     });
   });
   
