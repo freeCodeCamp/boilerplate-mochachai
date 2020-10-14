@@ -1,11 +1,11 @@
 'use strict'
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-var cors = require('cors');
-var runner = require('./test-runner');
+const cors = require('cors');
+const runner = require('./test-runner');
 
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 app.get('/', function(req, res){
@@ -15,12 +15,12 @@ app.get('/', function(req, res){
 app.use(express.static(__dirname + '/public'));
 
 app.get('/hello', function(req, res){
-  var name = req.query.name || 'Guest';
+  const name = req.query.name || 'Guest';
   res.type('txt').send('hello ' + name);
 })
 
-var travellers = function(req, res){
-  var data = {};
+const travellers = function(req, res){
+  let data = {};
   if(req.body && req.body.surname) {
     switch(req.body.surname.toLowerCase()) {
       case 'polo' :
@@ -65,7 +65,7 @@ var travellers = function(req, res){
 app.route('/travellers')
   .put(travellers);
 
-var error;
+let error;
 app.get('/_api/get-tests', cors(), function(req, res, next){
   if(error || process.env.SKIP_TESTS) 
     return res.json({status: 'unavailable'});
@@ -102,7 +102,7 @@ app.listen(process.env.PORT || 3000, function() {
 module.exports = app; // for testing
 
 function testFilter(tests, type, n) {
-  var out;
+  let out;
   switch (type) {
     case 'unit' :
       out = tests.filter(t => t.context.match('Unit Tests'));

@@ -1,19 +1,16 @@
-var chai = require('chai');
-var assert = chai.assert;
+const chai = require('chai');
+const assert = chai.assert;
 
-var server = require('../server');    /** import the Express app **/
+const server = require('../server');
 
-var chaiHttp = require('chai-http');  /** require the chai-http plugin **/
-chai.use(chaiHttp);                   /** use the chai-http plugin **/
+const chaiHttp = require('chai-http');
+chai.use(chaiHttp);
 
 
 suite('Functional Tests', function() {
-
-  // Mocha allows testing asyncronous operations.
-  // There is a small (BIG) difference. Can you spot it ?
-  
+ 
   // ### EXAMPLE ### 
-  test('Asynchronous test #example', function(done){ /** <= Pass a callback to the test function **/
+  test('Asynchronous test #example', function(done){
     setTimeout(function(){
       assert.isOk('Async test !!');
       done(); /** Call 'done()' when the async operation is completed**/
@@ -24,9 +21,7 @@ suite('Functional Tests', function() {
   // are instructional examples and are not parsed by our test analyser
   
   suite('Integration tests with chai-http', function() {
-    // We can test our API endpoints using a plugin, called chai-http.
-    // Let's see how it works. And remember, API calls are asynchronous...
-    
+
     // ### EXAMPLE ### 
     suite('GET /hello?name=[name] => "hello [name]"', function(){
       // We send a name string in the url query string.
@@ -43,48 +38,29 @@ suite('Functional Tests', function() {
           });
       });
       
-      /** Ready to have a try ?
-       * Replace assert.fail(). Make the test pass. **/
-       
-      // If no name is passed, the endpoint responds with 'hello Guest'.
-      test('Test GET /hello with no name',  function(done){ // Don't forget the callback...
-         chai.request(server)             // 'server' is the Express App
-          .get('/hello')                  // http_method(url). NO NAME in the query !
-          .end(function(err, res){        // res is the response object
+      test('Test GET /hello with no name',  function(done){
+         chai.request(server)
+          .get('/hello')
+          .end(function(err, res){
           
-            // Test the status and the text response (see the example above). 
-            // Please follow the order -status, -text. We rely on that in our tests.
-            // It should respond 'Hello Guest'
             assert.fail(res.status, 200);
             assert.fail(res.text, 'hello Guest');
-            done();   // Always call the 'done()' callback when finished.
+            done();
           });
       });
 
-      /**  Another one... **/
-      test('Test GET /hello with your name',  function(done){ // Don't forget the callback...
-         chai.request(server)             // 'server' is the Express App
-          .get('/hello?name=xy_z') /** <=== Put your name in the query **/ 
-          .end(function(err, res){        // res is the response object
-          
-            // Your tests here.
-            // Replace assert.fail(). Make the test pass.
-            // Test the status and the text response. Follow the test order like above.
+      test('Test GET /hello with your name',  function(done){
+         chai.request(server)
+          .get('/hello?name=xy_z')
+          .end(function(err, res){
+
             assert.fail(res.status, 200);
-             assert.fail(res.text, 'hello xy_z'/** <==  Put your name here **/);
-            done();   // Always call the 'done()' callback when finished.
+            assert.fail(res.text, 'hello xy_z');
+            done();
           });
       });
 
     });
-
-    // In the next example we'll see how to send data in a request payload (body).
-    // We are going to test a PUT request. The '/travellers' endpoint accepts
-    // a JSON object taking the structure :
-    // {surname: [last name of a traveller of the past]} ,
-    // The endpoint responds with :
-    // {name: [first name], surname:[last name], dates: [birth - death years]}
-    // see the server code for more details.
     
     // ### EXAMPLE ### 
     suite('PUT /travellers', function(){
@@ -106,97 +82,36 @@ suite('Functional Tests', function() {
             done();
           });
       });
-
-      /** Now it's your turn. Make the test pass. **/
-      // We expect the response to be
-      // {name: 'Cristoforo', surname: 'Colombo', dates: '1451 - 1506'}
-      // check the status, the type, name and surname.
-      
-      // !!!! Follow the order of the assertions in the preceding example!!!!, 
-      // we rely on it in our tests.
       
       test('send {surname: "Colombo"}',  function(done){
-       
-       // we setup the request for you...
        chai.request(server)
         .put('/travellers')
-        /** send {surname: 'Colombo'} here **/
-        // .send({...})
+
         .end(function(err, res){
+
+          assert.fail();
           
-          /** your tests here **/
-          assert.fail(); // remove this after adding tests
-          
-          done(); // Never forget the 'done()' callback...
+          done();
         });
       });
 
-      /** Repetition is the mother of learning. **/
-      // Try it again. This time without help !!
       test('send {surname: "da Verrazzano"}', function(done) {
-        /** place the chai-http request code here... **/
-        
-        /** place your tests inside the callback **/
-        
-        assert.fail(); // remove this after adding tests
+
+        assert.fail();
         done();
       });
     });
 
   });
 
-  // In the next challenges we are going to simulate the human interaction with
-  // a page using a device called 'Headless Browser'. A headless browser is a web
-  // browser without a graphical user interface. These kind of tools are
-  // particularly useful for testing web pages as they are able to render
-  // and understand HTML, CSS, and JavaScript the same way a browser would.
+  const Browser = require('zombie');
 
-  // For these challenges we are using [Zombie.Js](http://zombie.js.org/)
-  // It's a lightweight browser which is totally based on JS, without relying on
-  // additional binaries to be installed. This feature makes it usable in
-  // an environment such as Gomix. There are many other (more powerful) options.
-
-  var Browser = require('zombie');
-
-  // On Gomix we'll use this setting
-  /** ### Copy your project's url here  ### **/
-  Browser.site = 'https://sincere-cone.gomix.me'; 
-  
-  // If you are testing on a local environment replace the line above  with 
-  // Browser.localhost('example.com', (process.env.PORT || 3000));
 
   suite('e2e Testing with Zombie.js', function() {
-    const browser = new Browser();
-
-    // Mocha allows You to prepare the ground running some code
-    // before the actual tests. This can be useful for example to create
-    // items in the database, which will be used in the successive tests.
-
-    // With a headless browser, before the actual testing, we need to
-    // **visit** the page we are going to inspect...
-    // the suiteSetup 'hook' is executed only once at the suite startup.
-    // Other different hook types can be executed before each test, after
-    // each test, or at the end of a suite. See the Mocha docs for more infos.
-
-    suiteSetup(function(done) { // Remember, web interactions are asynchronous !!
-      return browser.visit('/', done);  // Browser asynchronous operations take a callback
-    });
-
+ 
     suite('"Famous Italian Explorers" form', function() {
-      
-      // In the HTML main view we provided a input form.
-      // It sends data to the "PUT /travellers" endpoint that we used above
-      // with an Ajax request. When the request completes successfully the
-      // client code appends a <div> containing the infos returned by the call
-      // to the DOM. 
-      
-      /** 
-       * As a starter, try the input form manually!  
-       * send the name 'Polo' ! You'll get infos about the famous
-       * explorer 'Marco Polo'
-       **/ // (not required to pass the tests)
-      
-      // Did it ? Ok. Let's see how to automate the process...
+
+
       
       // ### EXAMPLE ###
       test('#example - submit the input "surname" : "Polo"', function(done) {

@@ -1,17 +1,17 @@
 function objParser(str, init) {
   // finds objects, arrays, strings, and function arguments
   // between parens, because they may contain ','
-  var openSym = ['[', '{', '"', "'", '('];
-  var closeSym = [']', '}', '"', "'", ')'];
-  var type;
+  const openSym = ['[', '{', '"', "'", '('];
+  const closeSym = [']', '}', '"', "'", ')'];
+  let type;
   for(var i = (init || 0); i < str.length; i++ ) {
     type = openSym.indexOf(str[i]);
     if( type !== -1)  break;
   }
   if (type === -1) return null;
-  var open = openSym[type];
-  var close = closeSym[type];
-  var count = 1;
+  const open = openSym[type];
+  const close = closeSym[type];
+  let count = 1;
   for(var k = i+1; k < str.length; k++) {
     if(open === '"' || open === "'") {
       if(str[k] === close) count--;
@@ -23,7 +23,7 @@ function objParser(str, init) {
     if(count === 0) break;
   }
   if(count !== 0) return null;
-  var obj = str.slice(i, k+1);
+  const obj = str.slice(i, k+1);
   return {
     start : i,
     end: k,
@@ -33,9 +33,9 @@ function objParser(str, init) {
 
 function replacer(str) {
   // replace objects with a symbol ( __#n)
-  var obj;
-  var cnt = 0;
-  var data = [];
+  let obj;
+  let cnt = 0;
+  let data = [];
   while(obj = objParser(str)) {
     data[cnt] = obj.obj;
     str = str.substring(0, obj.start) + '__#' + cnt++ + str.substring(obj.end+1)
@@ -48,10 +48,10 @@ function replacer(str) {
 
 function splitter(str) {
   // split on commas, then restore the objects
-  var strObj = replacer(str);
-  var args = strObj.str.split(',');
+  const strObj = replacer(str);
+  let args = strObj.str.split(',');
   args = args.map(function(a){
-    var m = a.match(/__#(\d+)/);
+    let m = a.match(/__#(\d+)/);
     while (m) {
       a = a.replace(/__#(\d+)/, strObj.dictionary[m[1]]);
       m = a.match(/__#(\d+)/);
@@ -73,23 +73,23 @@ function assertionAnalyser(body) {
   // replace assertions bodies, so that they cannot
   // contain the word 'assertion'
 
-  var body = body.match(/(?:browser\s*\.\s*)?assert\s*\.\s*\w*\([\s\S]*\)/)[0];
-  var s = replacer(body);
+  const body = body.match(/(?:browser\s*\.\s*)?assert\s*\.\s*\w*\([\s\S]*\)/)[0];
+  const s = replacer(body);
   // split on 'assertion'
-  var splittedAssertions = s.str.split('assert');
-  var assertions = splittedAssertions.slice(1);
+  const splittedAssertions = s.str.split('assert');
+  let assertions = splittedAssertions.slice(1);
   // match the METHODS
 
-  var assertionBodies = [];
-  var methods = assertions.map(function(a, i){
-    var m = a.match(/^\s*\.\s*(\w+)__#(\d+)/);
+  let assertionBodies = [];
+  const methods = assertions.map(function(a, i){
+    const m = a.match(/^\s*\.\s*(\w+)__#(\d+)/);
     assertionBodies.push(parseInt(m[2]));
-    var pre = splittedAssertions[i].match(/browser\s*\.\s*/) ? 'browser.' : '';
+    const pre = splittedAssertions[i].match(/browser\s*\.\s*/) ? 'browser.' : '';
     return pre + m[1];
   });
   if(methods.some(function(m){ return !m })) return "invalid assertion";
   // remove parens from the assertions bodies
-  var bodies = assertionBodies.map(function(b){
+  const bodies = assertionBodies.map(function(b){
     return s.dictionary[b].slice(1,-1).trim();
   });
   assertions = methods.map(function(m, i) {
