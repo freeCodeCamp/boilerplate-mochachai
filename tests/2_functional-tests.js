@@ -122,9 +122,10 @@ suite("Functional Tests", function () {
   const Browser = require("zombie");
 
   suite("e2e Testing with Zombie.js", function () {
+
     suite('"Famous Italian Explorers" form', function () {
       // ### EXAMPLE ###
-      test('#example - submit the input "surname" : "Polo"', function (done) {
+      test('#test - submit the input "surname" : "Polo"', function (done) {
         browser.fill("surname", "Polo").pressButton("submit", function () {
           // pressButton is ## Async ##.
           // It waits for the ajax call to complete...
