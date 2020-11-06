@@ -36,6 +36,7 @@ function replacer(str) {
   let obj;
   let cnt = 0;
   let data = [];
+  // obj = objParser(str) is not a syntax error
   while ((obj = objParser(str))) {
     data[cnt] = obj.obj;
     str =
