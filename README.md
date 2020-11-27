@@ -1,5 +1,1 @@
-FCC Test Challenge Prototype 
-============================
-[![Run on Repl.it](https://repl.it/badge/github/freeCodeCamp/boilerplate-mochachai)](https://repl.it/github/freeCodeCamp/boilerplate-mochachai)
-
-QA with mocha & chai
+# [Quality Assurance with Chai](https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-and-testing-with-chai/)

@@ -12,7 +12,7 @@ function Utils() {
    };
 
    this.ajax = function (options, cb) {
-      var xmlhttp = new XMLHttpRequest();
+      const xmlhttp = new XMLHttpRequest();
 
       xmlhttp.onreadystatechange = function () {
          if (xmlhttp.readyState === 4){
@@ -29,21 +29,21 @@ function Utils() {
          }
       };
 
-      var method = options.method || 'get';
-      var url = options.url || '/';
+      const method = options.method || 'get';
+      let url = options.url || '/';
 
       if(url.charAt(url.length - 1) === '/')
         url = url.slice(0,url.length-1);
 
       if (options.data) {
-        var query;
-        var contentType = "application/x-www-form-urlencoded";
+        let query;
+        let contentType = "application/x-www-form-urlencoded";
         if(options.type && options.type === 'json') {
           query = JSON.stringify(options.data);
           contentType = "application/json";
         } else {
           query = [];
-          for (var key in params) {
+          for (let key in params) {
             query.push(key + '=' + encodeURIComponent(params[key]));
             query.push('&');
           }
@@ -76,17 +76,17 @@ function Utils() {
    };
 }
 
-var utils = new Utils();
+const utils = new Utils();
 
 utils.ready(function() {
 
-  var form = document.getElementById('f1');
-  var input = document.getElementById('i1');
-  var div = document.getElementById('tn');
+  const form = document.getElementById('f1');
+  const input = document.getElementById('i1');
+  const div = document.getElementById('tn');
   form.addEventListener('submit', function(e){
     e.preventDefault();
     if(input.value) {
-      var options = {
+      const options = {
         method: 'put',
         url: '/travellers',
         type: 'json',
