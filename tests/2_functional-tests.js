@@ -53,7 +53,7 @@ suite("Functional Tests", function () {
 
 const Browser = require("zombie");
 
-suite("e2e Testing with Zombie.js", function () {
+suite("Functional Tests with Zombie.js", function () {
 
   suite('"Famous Italian Explorers" form', function () {
     // #5
