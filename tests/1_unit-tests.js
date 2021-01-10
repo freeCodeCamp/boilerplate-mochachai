@@ -9,7 +9,7 @@ suite('Unit Tests', function () {
       assert.isNotNull(1, '1 is not null');
     });
     // #2
-    test('#isDefined, #isUndefined', function () {
+   /* test('#isDefined, #isUndefined', function () {
       assert.fail(null, 'null is not undefined');
       assert.fail(undefined, 'undefined IS undefined');
       assert.fail('hello', 'a string is not undefined');
@@ -25,11 +25,11 @@ suite('Unit Tests', function () {
       assert.fail(true, 'true is true');
       assert.fail(!!'double negation', 'double negation of a truthy is true');
       assert.fail({ value: 'truthy' }, 'A truthy object is NOT TRUE (neither is false...)');
-    });
+    });*/
   });
 
   // -----------------------------------------------------------------------------
-
+/*
   suite('Equality', function () {
     // #5
     test('#equal, #notEqual', function () {
@@ -163,6 +163,6 @@ suite('Unit Tests', function () {
       assert.fail(myCar.wheels, String);
     });
   });
-
+*/
   // -----------------------------------------------------------------------------
 });
