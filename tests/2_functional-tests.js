@@ -14,8 +14,8 @@ suite("Functional Tests", function () {
         .request(server)
         .get("/hello")
         .end(function (err, res) {
-          assert.fail(res.status, 200);
-          assert.fail(res.text, "hello Guest");
+          assert.equal(res.status, 200);
+          assert.equal(res.text, "hello Guest");
           done();
         });
     });
@@ -25,8 +25,8 @@ suite("Functional Tests", function () {
         .request(server)
         .get("/hello?name=xy_z")
         .end(function (err, res) {
-          assert.fail(res.status, 200);
-          assert.fail(res.text, "hello xy_z");
+          assert.equal(res.status, 200);
+          assert.equal(res.text, "hello xy_z");
           done();
         });
     });
@@ -35,32 +35,38 @@ suite("Functional Tests", function () {
       chai
         .request(server)
         .put("/travellers")
-
+        .send({'surname': 'Colombo'})
         .end(function (err, res) {
-          assert.fail();
-
-          done();
+        assert.deepEqual([res.body], [{"name": "Cristoforo", "surname": "Colombo", "dates": "1451 - 1506"}]);
+        done();
         });
     });
     // #4
     test('send {surname: "da Verrazzano"}', function (done) {
-      assert.fail();
-
-      done();
+      chai
+        .request(server)
+        .put("/travellers")
+        .send({'surname': 'da Verrazzano'})
+        .end(function (err, res){
+          assert.deepEqual(res.body, {"name": "Giovanni", "surname": "da Verrazzano", "dates": "1485 - 1528"});
+          done();
+        });
     });
   });
 });
 
 const Browser = require("zombie");
+// Browser.localhost('example.com',3000)
 
 suite("Functional Tests with Zombie.js", function () {
 
   suite('"Famous Italian Explorers" form', function () {
     // #5
     test('submit "surname" : "Colombo" - write your e2e test...', function (done) {
+      const browser = new Browser();
+      browser.visit('/');
       browser.fill("surname", "Colombo").pressButton("submit", function () {
-        assert.fail();
-
+        assert.deepEqual([res.body], [{"name": "Cristoforo", "surname": "Colombo", "dates": "1451 - 1506"}]);
         done();
       });
     });
