@@ -23,10 +23,10 @@ suite("Functional Tests", function () {
     test("Test GET /hello with your name", function (done) {
       chai
         .request(server)
-        .get("/hello?name=xy_z")
+        .get("/hello?name=John")
         .end(function (err, res) {
           assert.equal(res.status, 200);
-          assert.equal(res.text, "hello xy_z");
+          assert.equal(res.text, "hello John");
           done();
         });
     });
@@ -37,6 +37,8 @@ suite("Functional Tests", function () {
         .put("/travellers")
         .send({'surname': 'Colombo'})
         .end(function (err, res) {
+        assert.equal(res.status, 200)
+        assert.equal(res.type, 'application/json')
         assert.deepEqual([res.body], [{"name": "Cristoforo", "surname": "Colombo", "dates": "1451 - 1506"}]);
         done();
         });
@@ -48,6 +50,8 @@ suite("Functional Tests", function () {
         .put("/travellers")
         .send({'surname': 'da Verrazzano'})
         .end(function (err, res){
+          assert.equal(res.status, 200)
+          assert.equal(res.type, 'application/json')
           assert.deepEqual(res.body, {"name": "Giovanni", "surname": "da Verrazzano", "dates": "1485 - 1528"});
           done();
         });
@@ -56,7 +60,7 @@ suite("Functional Tests", function () {
 });
 
 const Browser = require("zombie");
-Browser.localhost = 'example.com';
+Browser.site = 'localhost:3000';
 
 suite("Functional Tests with Zombie.js", function () {
   const browser = new Browser();
