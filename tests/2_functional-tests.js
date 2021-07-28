@@ -7,6 +7,7 @@ const chaiHttp = require('chai-http');
 chai.use(chaiHttp);
 
 suite('Functional Tests', function () {
+  this.timeout(5000);
   suite('Integration tests with chai-http', function () {
     // #1
     test('Test GET /hello with no name', function (done) {
@@ -54,6 +55,8 @@ suite('Functional Tests', function () {
 const Browser = require('zombie');
 
 suite('Functional Tests with Zombie.js', function () {
+  this.timeout(5000);
+
   suite('"Famous Italian Explorers" form', function () {
     // #5
     test('Submit the surname "Colombo" in the HTML form', function (done) {
