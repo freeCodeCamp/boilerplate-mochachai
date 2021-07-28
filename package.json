@@ -1,31 +1,19 @@
 {
-	"//1": "describes your app and its dependencies",
-	"//2": "https://docs.npmjs.com/files/package.json",
-	"//3": "updating this file will download and update your packages",
-	"name": "my-hyperdev-app",
-	"version": "0.0.1",
-	"description": "What am I about?",
-	"main": "server.js",
-	"scripts": {
-		"start": "node server.js"
-	},
-	"dependencies": {
-		"express": "^5.0.0-alpha.2",
-		"body-parser": "^1.15.2",
-		"mocha": "^3.1.0",
-		"chai": "^3.5.0",
-		"chai-http": "^3.0.0",
-		"zombie": "^4.2.1",
-		"cors": "^2.8.1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://hyperdev.com/#!/project/welcome-project"
-	},
-	"keywords": [
-		"node",
-		"hyperdev",
-		"express"
-	],
-	"license": "MIT"
+  "name": "automated-testing-app",
+  "version": "0.0.1",
+  "description": "Boilerplate for the Quality Assurance and Testing with Chai challenges",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "chai": "4.3.4",
+    "chai-http": "4.3.0",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "mocha": "9.0.3",
+    "zombie": "6.1.4"
+  },
+  "license": "MIT"
 }
