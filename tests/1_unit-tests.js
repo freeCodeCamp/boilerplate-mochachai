@@ -48,14 +48,14 @@ suite('Unit Tests', function () {
     // #7
     test('#deepEqual, #notDeepEqual', function () {
       assert.fail({ a: '1', b: 5 }, { b: 5, a: '1' }, "The order of keys doesn't matter");
-      assert.fail({ a: [5, 6] }, { a: [6, 5] }, "The order of array elements does matter");
+      assert.fail({ a: [5, 6] }, { a: [6, 5] }, 'The order of array elements does matter');
     });
   });
 
   // -----------------------------------------------------------------------------
 
   function weirdNumbers(delta) {
-    return (1 + delta - Math.random());
+    return 1 + delta - Math.random();
   }
 
   suite('Comparisons', function () {
@@ -122,7 +122,7 @@ suite('Unit Tests', function () {
     });
   });
 
-  // ----------------------------------------------------------------------------- 
+  // -----------------------------------------------------------------------------
 
   const Car = function () {
     this.model = 'sedan';
