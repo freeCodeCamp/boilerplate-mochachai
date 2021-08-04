@@ -60,7 +60,7 @@ suite('Functional Tests with Zombie.js', function () {
 
 
   suite('Headless browser', function () {
-    test('should have a site variable', function() {
+    test('should have a working site variable', function() {
       assert.isNotNull(browser.site);
     });
   });
