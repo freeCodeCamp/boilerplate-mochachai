@@ -5,26 +5,26 @@ suite('Unit Tests', function () {
   suite('Basic Assertions', function () {
     // #1
     test('#isNull, #isNotNull', function () {
-      assert.fail(null, 'this is an optional error description - e.g. null is null');
+      assert.fail(null, 'This is an optional error description - e.g. null is null');
       assert.fail(1, '1 is not null');
     });
     // #2
     test('#isDefined, #isUndefined', function () {
       assert.fail(null, 'null is not undefined');
       assert.fail(undefined, 'undefined IS undefined');
-      assert.fail('hello', 'a string is not undefined');
+      assert.fail('hello', 'A string is not undefined');
     });
     // #3
     test('#isOk, #isNotOk', function () {
       assert.fail(null, 'null is falsey');
-      assert.fail("I'm truthy", 'a string is truthy');
+      assert.fail("I'm truthy", 'A string is truthy');
       assert.fail(true, 'true is truthy');
     });
     // #4
     test('#isTrue, #isNotTrue', function () {
       assert.fail(true, 'true is true');
-      assert.fail(!!'double negation', 'double negation of a truthy is true');
-      assert.fail({ value: 'truthy' }, 'A truthy object is NOT TRUE (neither is false...)');
+      assert.fail(!!'double negation', 'Double negation of a truthy value is true');
+      assert.fail({ value: 'truthy' }, 'Objects are truthy, but are not boolean values');
     });
   });
 
@@ -33,10 +33,10 @@ suite('Unit Tests', function () {
   suite('Equality', function () {
     // #5
     test('#equal, #notEqual', function () {
-      assert.fail(12, '12', 'numbers are coerced into strings with == ');
+      assert.fail(12, '12', 'Numbers are coerced into strings with ==');
       assert.fail({ value: 1 }, { value: 1 }, '== compares object references');
-      assert.fail(6 * '2', '12', 'no more hints...');
-      assert.fail(6 + '2', '12', 'type your error message if you want');
+      assert.fail(6 * '2', '12');
+      assert.fail(6 + '2', '12');
     });
     // #6
     test('#strictEqual, #notStrictEqual', function () {
@@ -47,15 +47,15 @@ suite('Unit Tests', function () {
     });
     // #7
     test('#deepEqual, #notDeepEqual', function () {
-      assert.fail({ a: '1', b: 5 }, { b: 5, a: '1' }, "keys order doesn't matter");
-      assert.fail({ a: [5, 6] }, { a: [6, 5] }, "array elements position does matter !!");
+      assert.fail({ a: '1', b: 5 }, { b: 5, a: '1' }, "The order of keys doesn't matter");
+      assert.fail({ a: [5, 6] }, { a: [6, 5] }, 'The order of array elements does matter');
     });
   });
 
   // -----------------------------------------------------------------------------
 
   function weirdNumbers(delta) {
-    return (1 + delta - Math.random());
+    return 1 + delta - Math.random();
   }
 
   suite('Comparisons', function () {
@@ -87,13 +87,13 @@ suite('Unit Tests', function () {
   suite('Arrays', function () {
     // #11
     test('#isArray, #isNotArray', function () {
-      assert.fail('isThisAnArray?'.split(''), 'String.prototype.split() returns an Array');
-      assert.fail([1, 2, 3].indexOf(2), 'indexOf returns a number.');
+      assert.fail('isThisAnArray?'.split(''), 'String.prototype.split() returns an array');
+      assert.fail([1, 2, 3].indexOf(2), 'indexOf returns a number');
     });
     // #12
     test('Array #include, #notInclude', function () {
       assert.fail(winterMonths, 'jul', "It's summer in july...");
-      assert.fail(backendLanguages, 'javascript', 'JS is a backend language !!');
+      assert.fail(backendLanguages, 'javascript', 'JS is a backend language');
     });
   });
 
@@ -105,14 +105,14 @@ suite('Unit Tests', function () {
   suite('Strings', function () {
     // #13
     test('#isString, #isNotString', function () {
-      assert.fail(Math.sin(Math.PI / 4), 'a float is not a string');
-      assert.fail(process.env.PATH, 'env vars are strings (or undefined)');
-      assert.fail(JSON.stringify({ type: 'object' }), 'a JSON is a string');
+      assert.fail(Math.sin(Math.PI / 4), 'A float is not a string');
+      assert.fail(process.env.PATH, 'An env variable is a string (or undefined)');
+      assert.fail(JSON.stringify({ type: 'object' }), 'JSON is a string');
     });
     // #14
     test('String #include, #notInclude', function () {
-      assert.fail('Arrow', 'row', "Arrow contains row...");
-      assert.fail('dart', 'queue', "But a dart doesn't contain a queue");
+      assert.fail('Arrow', 'row', "'Arrow' contains 'row'");
+      assert.fail('dart', 'queue', "But 'dart' doesn't contain 'queue'");
     });
     // #15
     test('#match, #notMatch', function () {
@@ -122,10 +122,10 @@ suite('Unit Tests', function () {
     });
   });
 
-  // ----------------------------------------------------------------------------- 
+  // -----------------------------------------------------------------------------
 
   const Car = function () {
-    this.model = 'cedan';
+    this.model = 'sedan';
     this.engines = 1;
     this.wheels = 4;
   };
@@ -143,8 +143,8 @@ suite('Unit Tests', function () {
   suite('Objects', function () {
     // #16
     test('#property, #notProperty', function () {
-      assert.fail(myCar, 'wings', 'A car has not wings');
-      assert.fail(airlinePlane, 'engines', 'planes have engines');
+      assert.fail(myCar, 'wings', "Cars don't have wings");
+      assert.fail(airlinePlane, 'engines', 'Planes have engines');
       assert.fail(myCar, 'wheels', 'Cars have wheels');
     });
     // #17
@@ -159,7 +159,7 @@ suite('Unit Tests', function () {
     test('#instanceOf, #notInstanceOf', function () {
       assert.fail(myCar, Plane);
       assert.fail(airlinePlane, Plane);
-      assert.fail(airlinePlane, Object, 'everything is an Object');
+      assert.fail(airlinePlane, Object);
       assert.fail(myCar.wheels, String);
     });
   });
