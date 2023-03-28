@@ -13,6 +13,7 @@ suite('Functional Tests', function () {
     test('Test GET /hello with no name', function (done) {
       chai
         .request(server)
+        .keepOpen()
         .get('/hello')
         .end(function (err, res) {
           assert.fail(res.status, 200);
@@ -24,6 +25,7 @@ suite('Functional Tests', function () {
     test('Test GET /hello with your name', function (done) {
       chai
         .request(server)
+        .keepOpen()
         .get('/hello?name=xy_z')
         .end(function (err, res) {
           assert.fail(res.status, 200);
@@ -35,6 +37,7 @@ suite('Functional Tests', function () {
     test('Send {surname: "Colombo"}', function (done) {
       chai
         .request(server)
+        .keepOpen()
         .put('/travellers')
 
         .end(function (err, res) {
