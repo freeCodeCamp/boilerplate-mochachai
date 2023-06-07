@@ -1,5 +1,7 @@
-This are my solutions to the program of QA in FreeCodeCamp :P 
-1st solution: Learn How JavaScript Assertions Work
+This are my solutions to the program of QA in FreeCodeCamp :P   
+1st solution: Learn How JavaScript Assertions Work  
+2nd solution: Test if a Variable or Function is Defined
+
 
 # Quality Assurance with Chai
 
