@@ -1,4 +1,4 @@
-This are my solutions to the program of QA in FreeCodeCamp :P   
+These are my solutions to the program of QA in FreeCodeCamp :P   
 1st solution: Learn How JavaScript Assertions Work  
 2nd solution: Test if a Variable or Function is Defined  
 3rd solution: Use Assert.isOK and Assert.isNotOK  
@@ -11,8 +11,8 @@ This are my solutions to the program of QA in FreeCodeCamp :P
 10th Test if a Value Falls within a Specific Range  
 11th Test if a Value is an Array  
 12th Test if an Array Contains an Item  
-13th Test if a Value is a String
-
+13th Test if a Value is a String  
+14th Test if a String contains a Substring
 
 
 # Quality Assurance with Chai
