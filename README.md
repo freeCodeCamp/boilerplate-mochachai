@@ -17,7 +17,8 @@ These are my solutions to the program of QA in FreeCodeCamp :P
 16th Test if an Object has a Property  
 17th Test if a Value is of a Specific Data Structure Type  
 18th Test if an Object is an Instance of a Constructor  
-19th Run Functional Tests on API Endpoints using Chai-HTTP
+19th Run Functional Tests on API Endpoints using Chai-HTTP  
+20th Run Functional Tests on API Endpoints using Chai-HTTP II
 
 # Quality Assurance with Chai
 
