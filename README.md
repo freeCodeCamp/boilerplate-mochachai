@@ -18,7 +18,8 @@ These are my solutions to the program of QA in FreeCodeCamp :P
 17th Test if a Value is of a Specific Data Structure Type  
 18th Test if an Object is an Instance of a Constructor  
 19th Run Functional Tests on API Endpoints using Chai-HTTP  
-20th Run Functional Tests on API Endpoints using Chai-HTTP II
+20th Run Functional Tests on API Endpoints using Chai-HTTP II  
+21th Run Functional Tests on an API Response using Chai-HTTP III - PUT method
 
 # Quality Assurance with Chai
 
