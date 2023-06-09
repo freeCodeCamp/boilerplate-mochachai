@@ -5,7 +5,8 @@ This are my solutions to the program of QA in FreeCodeCamp :P
 4th solution: Test for Truthiness  
 5th Use the Double Equals to Assert Equality  
 6th Use the Triple Equals to Assert Strict Equality  
-7th Assert Deep Equality with .deepEqual and .notDeepEqual
+7th Assert Deep Equality with .deepEqual and .notDeepEqual  
+8th Compare the Properties of Two Elements
 
 
 # Quality Assurance with Chai
