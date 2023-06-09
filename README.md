@@ -13,8 +13,8 @@ These are my solutions to the program of QA in FreeCodeCamp :P
 12th Test if an Array Contains an Item  
 13th Test if a Value is a String  
 14th Test if a String contains a Substring  
-15th Use Regular Expressions to Test a String
-
+15th Use Regular Expressions to Test a String  
+16th Test if an Object has a Property
 
 # Quality Assurance with Chai
 
