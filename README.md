@@ -7,7 +7,9 @@ This are my solutions to the program of QA in FreeCodeCamp :P
 6th Use the Triple Equals to Assert Strict Equality  
 7th Assert Deep Equality with .deepEqual and .notDeepEqual  
 8th Compare the Properties of Two Elements  
-9th Test if One Value is Below or At Least as Large as Another
+9th Test if One Value is Below or At Least as Large as Another  
+10th Test if a Value Falls within a Specific Range  
+
 
 
 # Quality Assurance with Chai
