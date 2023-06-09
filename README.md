@@ -4,7 +4,8 @@ This are my solutions to the program of QA in FreeCodeCamp :P
 3rd solution: Use Assert.isOK and Assert.isNotOK  
 4th solution: Test for Truthiness  
 5th Use the Double Equals to Assert Equality  
-6th Use the Triple Equals to Assert Strict Equality
+6th Use the Triple Equals to Assert Strict Equality  
+7th Assert Deep Equality with .deepEqual and .notDeepEqual
 
 
 # Quality Assurance with Chai
