@@ -15,7 +15,8 @@ These are my solutions to the program of QA in FreeCodeCamp :P
 14th Test if a String contains a Substring  
 15th Use Regular Expressions to Test a String  
 16th Test if an Object has a Property  
-17th Test if a Value is of a Specific Data Structure Type
+17th Test if a Value is of a Specific Data Structure Type  
+18th Test if an Object is an Instance of a Constructor
 
 # Quality Assurance with Chai
 
