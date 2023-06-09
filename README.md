@@ -10,7 +10,8 @@ This are my solutions to the program of QA in FreeCodeCamp :P
 9th Test if One Value is Below or At Least as Large as Another  
 10th Test if a Value Falls within a Specific Range  
 11th Test if a Value is an Array  
-12th Test if an Array Contains an Item
+12th Test if an Array Contains an Item  
+13th Test if a Value is a String
 
 
 
