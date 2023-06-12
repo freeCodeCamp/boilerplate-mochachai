@@ -22,7 +22,8 @@ These are my solutions to the program of QA in FreeCodeCamp :P
 21th Run Functional Tests on an API Response using Chai-HTTP III - PUT method  
 22th Run Functional Tests on an API Response using Chai-HTTP IV - PUT method  
 23th Simulate Actions Using a Headless Browser  
-24th Run Functional Tests Using a Headless Browser
+24th Run Functional Tests Using a Headless Browser  
+25th Run Functional Tests on API Endpoints using Chai-HTTP II
 
 
 # Quality Assurance with Chai
