@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "body-parser": "1.19.0",
-    "chai": "4.3.4",
+    "chai": "4.3.10",
     "chai-http": "4.3.0",
     "cors": "2.8.5",
     "express": "4.17.1",
