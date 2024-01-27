@@ -1,0 +1,174 @@
+repo_name: freeCodeCamp/boilerplate-mochachai
+report_id: b143cbf0917ece8557d4bb8ab696e2c5
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-27T03:50:41+00:00'
+requested_by: scissorsneedfoodtoo
+provider: github
+branch: main
+detected_tools_count: 12
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-mochachai
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-mochachai
+  detection_source: Repo Metadata
+- name: ExpressJS
+  description: Sinatra inspired web development framework for node.js -- insanely
+    fast, flexible, and simple
+  website_url: http://expressjs.com/
+  version: 4.17.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Microframeworks (Backend)
+  image_url: https://img.stackshare.io/service/1163/hashtag.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-mochachai/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2021-08-13 23:37:04.000000000 Z
+- name: Chai
+  description: A BDD / TDD assertion library
+  website_url: http://chaijs.com/
+  version: 4.3.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/1725/chai.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-mochachai/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2021-08-13 23:37:04.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-mochachai
+  detection_source: Repo Metadata
+- name: Mocha
+  description: Simple, flexible, fun javascript test framework for node.js &amp; the
+    browser
+  website_url: http://mochajs.org/
+  version: 9.0.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/832/mocha.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-mochachai/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2021-08-13 23:37:04.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-mochachai/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: System
+  last_updated_on: 2017-02-18 18:49:30.000000000 Z
+- name: body-parser
+  description: Node.js body parsing middleware
+  package_url: https://www.npmjs.com/body-parser
+  version: 1.19.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15906/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-mochachai/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2021-08-13 23:37:04.000000000 Z
+- name: chai-http
+  description: Extend Chai Assertion library with tests for http apis
+  package_url: https://www.npmjs.com/chai-http
+  version: 4.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16767/default_aa2369d4412b5a2c6812de3c666299e0ccd25ea2.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-mochachai/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2021-08-13 23:37:04.000000000 Z
+- name: cors
+  description: Node.js CORS middleware
+  package_url: https://www.npmjs.com/cors
+  version: 2.8.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16165/default_41f04716a804e853d5c38a5b81ee0ea8a842ad82.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-mochachai/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2021-08-13 23:37:04.000000000 Z
+- name: express
+  description: Fast, unopinionated, minimalist web framework
+  package_url: https://www.npmjs.com/express
+  version: 4.17.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15818/default_db4a7791d2f1174547374b9b587bc10fec088a5a.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-mochachai/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2021-08-13 23:37:04.000000000 Z
+  vulnerabilities:
+  - name: qs vulnerable to Prototype Pollution
+    cve_id: CVE-2022-24999
+    cve_url: https://github.com/advisories/GHSA-hrpp-h998-j3pp
+    detected_date: Dec 7
+    severity: high
+    first_patched: 4.17.3
+- name: zombie
+  description: Insanely fast
+  package_url: https://www.npmjs.com/zombie
+  version: 6.1.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17566/default_661ab15cb9ea1663765f3e16ee70a1d2d50118d1.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-mochachai/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2021-08-13 23:37:04.000000000 Z
