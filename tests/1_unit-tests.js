@@ -23,9 +23,9 @@ test('#isOk, #isNotOk', function() {
 });
     // #4
     test('#isTrue, #isNotTrue', function () {
-      assert.fail(true, 'true is true');
-      assert.fail(!!'double negation', 'Double negation of a truthy value is true');
-      assert.fail({ value: 'truthy' }, 'Objects are truthy, but are not boolean values');
+      assert.isTrue(true, 'true is true');
+      assert.isNotTrue(!!'double negation', 'Double negation of a truthy value is true');
+      assert.isTrue({ value: 'truthy' }, 'Objects are truthy, but are not boolean values');
     });
   });
 
