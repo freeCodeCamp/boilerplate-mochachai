@@ -21,13 +21,17 @@ test('#isOk, #isNotOk', function() {
   assert.isOk("I'm truthy", 'a string is truthy');
   assert.isOk(true, 'true is truthy');
 });
-    // #4
-    test('#isTrue, #isNotTrue', function () {
-      assert.isTrue(true, 'true is true');
-      assert.isTrue(!!'double negation', 'Double negation of a truthy value is true');
-      assert.isNotTrue({ value: 'truthy' }, 'Objects are truthy, but are not boolean values');
-    });
-  });
+/** 4 - Use assert.isTrue() or assert.isNotTrue() to make the tests pass. **/
+// .isTrue(true) and .isNotTrue(everything else) will pass.
+// .isFalse() and .isNotFalse() also exist.
+test('#isTrue, #isNotTrue', function() {
+  assert.isTrue(true, 'true is true');
+  assert.isTrue(!!'double negation', 'double negation of a truthy is true');
+  assert.isNotTrue(
+    { value: 'truthy' },
+    'A truthy object is NOT TRUE (neither is false...)'
+  );
+});
 
   // -----------------------------------------------------------------------------
 
