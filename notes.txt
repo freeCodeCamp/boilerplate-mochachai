@@ -1,0 +1,16 @@
+/*
+ * @Author: AJ Javadi 
+ * @Email: amirjavadi25@gmail.com
+ * @Date: 2024-08-01 02:34:37 
+ * @Last Modified by: AJ Javadi
+ * @Last Modified time: 2024-08-01 02:34:59
+ * @Description: file:///workspace/boilerplate-mochachai/notes.txt
+ * AJ's notepad
+ */
+
+
+- Chai library
+- isNull
+- isDefined
+- isOk
+
