@@ -5,20 +5,28 @@ suite('Unit Tests', function () {
   suite('Basic Assertions', function () {
     // #1
     test('#isNull, #isNotNull', function () {
-      assert.fail(null, 'This is an optional error description - e.g. null is null');
-      assert.fail(1, '1 is not null');
+      // assert.fail(null, 'This is an optional error description - e.g. null is null');
+      assert.isNull(null, 'this is an optional message');
+      // assert.fail(1, '1 is not null');
+      assert.isNotNull(1, '1 is not null');
     });
     // #2
     test('#isDefined, #isUndefined', function () {
-      assert.fail(null, 'null is not undefined');
-      assert.fail(undefined, 'undefined IS undefined');
-      assert.fail('hello', 'A string is not undefined');
+      // assert.fail(null, 'null is not undefined');
+      assert.isDefined(null, 'not is not undefined')
+      // assert.fail(undefined, 'undefined IS undefined');
+      assert.isUndefined(undefined, 'undefined IS indeed defined ')
+      // assert.fail('hello', 'A string is not undefined');
+      assert.isDefined('hello', 'A string is not undefined')
     });
     // #3
     test('#isOk, #isNotOk', function () {
-      assert.fail(null, 'null is falsey');
-      assert.fail("I'm truthy", 'A string is truthy');
-      assert.fail(true, 'true is truthy');
+      // assert.fail(null, 'null is falsey');
+      assert.isNotOk(null, 'null is falsey');
+      // assert.fail("I'm truthy", 'A string is truthy');
+      assert.isOk("I'm truthy", 'A string is truthy')
+      // assert.fail(true, 'true is truthy');
+      assert.isOk(true, 'true is truthy');
     });
     // #4
     test('#isTrue, #isNotTrue', function () {
