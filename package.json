@@ -4,7 +4,7 @@
   "description": "Boilerplate for the Quality Assurance and Testing with Chai challenges",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node --watch server.js"
   },
   "dependencies": {
     "body-parser": "1.19.0",
